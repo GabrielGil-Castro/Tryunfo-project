@@ -13,7 +13,7 @@ class App extends React.Component {
     cardRare: 'normal',
     cardTrunfo: false,
     hasTrunfo: false,
-    isSaveButtonDisable: true,
+    isSaveButtonDisabled: true,
     arrInfo: [],
   };
 
@@ -42,7 +42,7 @@ class App extends React.Component {
         || Number(cardAttr3) < minNumber
         || allNumber > sumNumber;
       this.setState({
-        isSaveButtonDisable: verifySaveButton,
+        isSaveButtonDisabled: verifySaveButton,
       });
     });
   };
@@ -94,7 +94,7 @@ class App extends React.Component {
     const {
       cardName, cardDescription, cardAttr1,
       cardAttr2, cardAttr3, cardImage, cardRare,
-      cardTrunfo, hasTrunfo, isSaveButtonDisable, arrInfo,
+      cardTrunfo, hasTrunfo, isSaveButtonDisabled, arrInfo,
     } = this.state;
     return (
       <div>
@@ -110,7 +110,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
-          isSaveButtonDisable={ isSaveButtonDisable }
+          isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.saveButton }
         />
         <Card
